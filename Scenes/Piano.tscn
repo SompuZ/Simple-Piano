@@ -1,0 +1,116 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Texture/Padbutton/one/button.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=2]
+[ext_resource path="res://Sounds/_a3.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/_c3.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Sounds/_e3.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Sounds/_b3.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Sounds/_d3.ogg" type="AudioStream" id=7]
+
+[node name="Piano" type="Node2D"]
+
+[node name="Key1" type="Button" parent="."]
+margin_left = 75.0
+margin_top = 96.0
+margin_right = 183.0
+margin_bottom = 462.0
+icon = ExtResource( 1 )
+expand_icon = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sound1" type="AudioStreamPlayer2D" parent="Key1"]
+pause_mode = 2
+position = Vector2( -128, -45 )
+stream = ExtResource( 3 )
+volume_db = 5.0
+
+[node name="Key2" type="Button" parent="."]
+margin_left = 259.0
+margin_top = 96.0
+margin_right = 367.0
+margin_bottom = 462.0
+icon = ExtResource( 1 )
+expand_icon = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sound1" type="AudioStreamPlayer2D" parent="Key2"]
+pause_mode = 2
+position = Vector2( -128, -45 )
+stream = ExtResource( 6 )
+volume_db = 5.0
+
+[node name="Key3" type="Button" parent="."]
+margin_left = 451.0
+margin_top = 97.0
+margin_right = 559.0
+margin_bottom = 463.0
+icon = ExtResource( 1 )
+expand_icon = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sound1" type="AudioStreamPlayer2D" parent="Key3"]
+pause_mode = 2
+position = Vector2( -128, -45 )
+stream = ExtResource( 4 )
+volume_db = 5.0
+
+[node name="Key4" type="Button" parent="."]
+margin_left = 632.0
+margin_top = 95.0
+margin_right = 740.0
+margin_bottom = 461.0
+icon = ExtResource( 1 )
+expand_icon = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sound1" type="AudioStreamPlayer2D" parent="Key4"]
+pause_mode = 2
+position = Vector2( -128, -45 )
+stream = ExtResource( 7 )
+volume_db = 5.0
+
+[node name="Key5" type="Button" parent="."]
+margin_left = 813.0
+margin_top = 94.0
+margin_right = 921.0
+margin_bottom = 460.0
+icon = ExtResource( 1 )
+expand_icon = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sound1" type="AudioStreamPlayer2D" parent="Key5"]
+pause_mode = 2
+position = Vector2( -128, -45 )
+stream = ExtResource( 5 )
+volume_db = 5.0
+[connection signal="button_down" from="Key1" to="Key1" method="_on_Key1_button_down"]
+[connection signal="button_up" from="Key1" to="Key1" method="_on_Key1_button_up"]
+[connection signal="pressed" from="Key1" to="Key1" method="_on_Key1_pressed"]
+[connection signal="button_down" from="Key2" to="Key2" method="_on_Key1_button_down"]
+[connection signal="button_up" from="Key2" to="Key2" method="_on_Key1_button_up"]
+[connection signal="pressed" from="Key2" to="Key2" method="_on_Key1_pressed"]
+[connection signal="button_down" from="Key3" to="Key3" method="_on_Key1_button_down"]
+[connection signal="button_up" from="Key3" to="Key3" method="_on_Key1_button_up"]
+[connection signal="pressed" from="Key3" to="Key3" method="_on_Key1_pressed"]
+[connection signal="button_down" from="Key4" to="Key4" method="_on_Key1_button_down"]
+[connection signal="button_up" from="Key4" to="Key4" method="_on_Key1_button_up"]
+[connection signal="pressed" from="Key4" to="Key4" method="_on_Key1_pressed"]
+[connection signal="button_down" from="Key5" to="Key5" method="_on_Key1_button_down"]
+[connection signal="button_up" from="Key5" to="Key5" method="_on_Key1_button_up"]
+[connection signal="pressed" from="Key5" to="Key5" method="_on_Key1_pressed"]
